@@ -17,21 +17,16 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         idseq++;
         //this one has the id but it will be similar to what we have received at the beginning
         return timeEntry;
-
-
     }
 
     @Override
     public TimeEntry find(Long id){
          return timeEntryMap.get(id);
-
-
     }
 
     @Override
     public List<TimeEntry> list(){
         return new ArrayList(timeEntryMap.values()) ;
-
     }
 
     @Override

@@ -15,6 +15,9 @@ public class PalTrackerApplication {
     public static void main(String[] args) {
         SpringApplication.run(PalTrackerApplication.class, args);
     }
+
+    //these below items can be implemented using the @autowired and also using different way in spring however below @BEan allow us to control
+    //creating of the objects beans directly.
     @Bean
     TimeEntryRepository timeEntryRepository() {
         return new InMemoryTimeEntryRepository();
